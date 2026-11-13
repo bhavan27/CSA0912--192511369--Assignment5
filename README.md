@@ -1,72 +1,105 @@
-# CSA09 – Programming in Java | Assignment 5 – CO5
+# CSA09 – Programming in Java | Assignment 5 (CO5)
 ## Data Persistence Engineering – Files and Databases
 
-**Student Name:** ______________________________
-**Register Number:** ____________________________
-**Java version used for build checks:** OpenJDK 21
+**Student:** V. C. Bhavan Bairav  
+**Register Number:** 192511369  
+**Course:** Programming in Java – CSA0912 (CO2)  
+**Assignment:** Assignment 5 – 50 Marks
 
-This repository is arranged to match the assignment PDF's submission requirements.
+This repository contains my Java Assignment 5, covering file handling, data persistence, database connectivity and performance analysis. It is organised into Part A and Part B according to the assignment requirements.
 
-## Submission structure
+## Repository Structure
 
 ```text
 PartA/
   TaskA1/ ... TaskA5/
     README.md
     DESIGN.md
-    PSEUDOCODE.md (where separately required)
+    PSEUDOCODE.md
     input/
-    output/ (design diagrams)
+    output/
+
 PartB/
   TaskB1/ ... TaskB4/
     README.md
-    src/       Java source
-    sql/       database/table creation scripts
-    input/     test records and adversarial inputs
-    output/    expected behaviour, actual outputs, screenshots, measurements
+    src/
+    sql/
+    input/
+    output/
     ANALYSIS.md
 ```
 
-## Part A – Persistence Design & Pseudocode (25 marks)
-Part A contains record layouts, algorithmic pseudocode, diagrams and reasoning for A1–A5. **There are no Java source files in Part A**, because the PDF explicitly says Java code will not be accepted in place of pseudocode.
+## Part A – Persistence Design and Pseudocode
 
-## Part B – Implementation & Experimental Investigation (25 marks)
-Part B contains Java source, SQL scripts, test inputs, expected behaviour, actual outputs where executed, measurement data and interpretation.
+Part A focuses on the design aspects of data persistence. It covers record formats, buffered I/O, data-access patterns, object serialization and database transactions.
 
-### Execution status and evidence honesty
-- B1 was compiled and executed. Actual add/find/list, damaged-line, line-count timing and lookup-growth output are included.
-- B2 damaged-file validation was compiled and executed. The SQL-injection login comparison requires local MySQL and Connector/J; its pending status is explicitly labelled.
-- B3 JDBC insert comparisons and transaction tests require local MySQL and Connector/J. No database timings or outcomes have been fabricated.
-- B4 CSV validation preview was compiled and executed; actual validation output and rejected-line report are included. The database migration and DatabaseMetaData inspection still require local MySQL and Connector/J.
+The five tasks include:
 
-## Java and database setup
-Use JDK 17 or later. For JDBC tasks, install MySQL Server and MySQL Connector/J, then execute the task's `sql/schema.sql`.
+- **A1:** File format design using text and binary storage.
+- **A2:** Buffered and unbuffered I/O design.
+- **A3:** Data Access Object (DAO) pattern.
+- **A4:** Java object serialization.
+- **A5:** Database transactions and SQL injection prevention.
 
-Set environment variables:
-- `CO5_DB_URL=jdbc:mysql://localhost:3306/co5_transport`
-- `CO5_DB_USER=root`
-- `CO5_DB_PASSWORD=your_local_password`
+This section contains design explanations, diagrams, reasoning and pseudocode. It does not contain Java implementations, as the assignment requires pseudocode for Part A.
 
-Do not put a real password into source code or commit it to GitHub.
+## Part B – Implementation and Experimental Investigation
 
-For Windows PowerShell, include the Connector/J JAR in the classpath using `;`:
+Part B contains the Java programs, SQL scripts, test inputs, execution outputs and performance analysis.
+
+| Task | Description |
+|---|---|
+| B1 | Instrumented file store with record operations and performance measurements |
+| B2 | Adversarial input validation and SQL injection testing |
+| B3 | Statement, PreparedStatement, batch processing and transaction comparison |
+| B4 | Data migration validation and final persistence decision |
+
+## Java and Database Requirements
+
+- **Java:** JDK 17 or later.
+- **Database:** MySQL Server.
+- **JDBC Driver:** MySQL Connector/J.
+
+For database-related tasks, execute the respective `sql/schema.sql` file to create the required database and tables.
+
+The following environment variables are used for database connectivity:
+
+```text
+CO5_DB_URL=jdbc:mysql://localhost:3306/co5_transport
+CO5_DB_USER=root
+CO5_DB_PASSWORD=your_local_password
+```
+
+Database credentials are kept outside the source code to avoid exposing sensitive information in the repository.
+
+## Compile and Run
+
+For JDBC-based tasks, include the MySQL Connector/J JAR in the classpath.
+
+**Windows PowerShell:**
+
 ```powershell
 javac -cp ".;C:\path\to\mysql-connector-j.jar" *.java
 java -cp ".;C:\path\to\mysql-connector-j.jar" ClassName
 ```
-For macOS/Linux, use `:` as the classpath separator.
 
-## Progressive GitHub commits
-The assignment asks for at least one commit per task. Suggested commit messages:
-- `Complete Task A1 – file format design`
-- `Complete Task A2 – buffered I/O design`
-- `Complete Task A3 – DAO design`
-- `Complete Task A4 – serialization design`
-- `Complete Task A5 – transaction and injection design`
-- `Implement Task B1 – instrumented file store`
-- `Implement Task B2 – adversarial input tests`
-- `Implement Task B3 – JDBC comparison and batch tests`
-- `Implement Task B4 – migration and metadata`
+**macOS/Linux:** Use `:` instead of `;` as the classpath separator.
 
-## Before final submission
-Run the remaining MySQL-dependent tests on your machine. Save the complete console output and screenshots showing the test inputs/results, not just a final success message. Add the actual B2 login, B3 benchmark/transaction and B4 migration/metadata evidence into the corresponding `PartB/TaskB*/output/` folders.
+## Execution Status and Evidence
+
+- **B1:** Compiled and executed. Includes record addition, searching, route filtering, damaged-line handling, file-reading timings and lookup-growth measurements.
+- **B2:** Damaged-file validation compiled and executed. The SQL injection login comparison requires MySQL and Connector/J.
+- **B3:** JDBC insert comparisons and transaction tests require a configured MySQL environment. Database benchmark results are not included because the tests have not been executed.
+- **B4:** CSV validation preview compiled and executed, including valid and rejected records. Database migration and DatabaseMetaData inspection require MySQL and Connector/J.
+
+The output folders contain the available test results, screenshots and measurement data. Pending database experiments are identified separately rather than presented as completed results.
+
+## Progressive Git Commits
+
+The repository follows a task-wise structure to keep the design, implementation and testing evidence organised. Progressive commits maintain a clear development history, with at least one meaningful commit for each task.
+
+## Assignment Overview
+
+The assignment covers the complete persistence workflow, from designing file formats and algorithms to implementing file operations, validating input, investigating database performance and selecting a suitable storage solution.
+
+**Total: 50 Marks – Part A: 25 Marks | Part B: 25 Marks**
