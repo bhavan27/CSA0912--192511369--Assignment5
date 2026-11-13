@@ -3,7 +3,7 @@
 
 **Student:** V. C. Bhavan Bairav  
 **Register Number:** 192511369  
-**Course:** Programming in Java – CSA0912 (CO2)  
+**Course:** Programming in Java – CSA0912 (CO5)  
 **Assignment:** Assignment 5 – 50 Marks
 
 This repository contains my Java Assignment 5, covering file handling, data persistence, database connectivity and performance analysis. It is organised into Part A and Part B according to the assignment requirements.
