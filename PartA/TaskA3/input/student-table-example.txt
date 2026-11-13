@@ -1,0 +1,8 @@
+Student object:
+id=192311001
+name=Arun
+email=arun@example.edu
+department=CSE
+
+student table columns:
+student_id (PRIMARY KEY), student_name, email, department

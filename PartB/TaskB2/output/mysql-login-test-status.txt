@@ -1,0 +1,4 @@
+MySQL login comparison NOT EXECUTED in the build environment.
+Run LoginSecurityTest.java against the local test database created by sql/schema.sql with MySQL Connector/J.
+Expected: unsafe crafted login may be accepted; PreparedStatement version rejects the same input.
+No database result is claimed here.

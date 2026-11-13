@@ -1,0 +1,4 @@
+Normal valid account: user_id=student1, password=correct-password
+Unknown account: user_id=nobody
+Crafted password payload for unsafe query: ' OR '1'='1' -- 
+PreparedStatement should bind the payload as a literal value and reject it.

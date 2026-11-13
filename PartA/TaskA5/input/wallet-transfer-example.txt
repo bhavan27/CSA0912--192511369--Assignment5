@@ -1,0 +1,4 @@
+Source wallet: W001
+Destination wallet: W002
+Transfer amount: INR 500
+Required result: both debit and credit commit, or neither change is committed.

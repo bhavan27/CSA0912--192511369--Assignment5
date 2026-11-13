@@ -1,0 +1,1 @@
+Part A is a design and pseudocode component. This image is a diagram illustrating the design described in DESIGN.md; it is not a program execution screenshot.

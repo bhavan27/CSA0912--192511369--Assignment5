@@ -1,0 +1,9 @@
+VALID line 1: P2001
+VALID line 2: P2002
+VALID line 3: P2003
+REJECTED line 4: expected 5 fields
+REJECTED line 5: route/amount must be numeric
+VALID line 6: P2005
+Valid records: 4
+Rejected records: 2
+Validation stage completed; database loading is a separate step.

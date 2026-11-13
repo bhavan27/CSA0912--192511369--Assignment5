@@ -1,0 +1,7 @@
+experiment,size_or_records,unbuffered_ms,buffered_ms,notes
+line_count,1MB,447,11,Actual completed run on build machine
+line_count,10MB,4223,21,Actual completed run on build machine
+line_count,50MB,20574,41,Actual completed run on build machine
+find_last_record,1000,,20,Actual completed run; target last record
+find_last_record,10000,,67,Actual completed run; target last record
+find_last_record,100000,,124,Actual completed run; target last record

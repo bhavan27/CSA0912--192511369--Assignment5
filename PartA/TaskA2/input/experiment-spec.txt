@@ -1,0 +1,4 @@
+Attendance log size: 50 MiB (52,428,800 bytes).
+Experiment sizes for Part B1: 1 MiB, 10 MiB and 50 MiB.
+Line delimiter: LF (0x0A).
+Compare byte-at-a-time FileInputStream.read() with a 64 KiB buffered read.

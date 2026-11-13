@@ -1,0 +1,10 @@
+# A4.1 – What to persist
+Serialize the Hostel → Room list → Resident list object graph. Mark the live JDBC `Connection` reference transient because a live connection is a runtime resource, not persistent application state; it cannot meaningfully be restored by deserialization. Mark password transient as well, because storing a plaintext password in a serialized file is unsafe. Persist the name and register number. In a real system, store a salted password hash in a protected credential store rather than serializing the password.
+
+When Hostel is serialized, Java follows references from the root object and serializes reachable non-transient, serializable objects. Therefore Room and Resident must also implement Serializable. Shared object references are represented through the serialization handle mechanism, so repeated references are not blindly duplicated. A non-transient, non-serializable reachable object causes NotSerializableException.
+
+# A4.2 – Adding phone number
+If `serialVersionUID` is explicitly declared and remains unchanged, an older stream can generally be read by the new class; the newly added `phoneNumber` field receives its default value (null for String) unless custom migration logic supplies a value. If the serialVersionUID values differ, deserialization throws InvalidClassException. If no explicit UID is declared, the compiler-generated UID may change when class structure changes, making compatibility less predictable.
+
+# Alternative – CSV/JSON
+Text formats are usually more portable and inspectable, and adding a field can be handled by optional columns/properties and versioned parsers. Java serialization is convenient for object graphs but is Java-specific and more sensitive to class versioning. Both save/load in O(n) time for n residents. File size depends on encoding and metadata: serialization includes class/graph metadata; CSV is often compact for simple flat records; JSON is more verbose but self-describing. Actual sizes depend on data and serializer.

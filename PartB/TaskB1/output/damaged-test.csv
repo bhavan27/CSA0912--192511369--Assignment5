@@ -1,0 +1,5 @@
+P1,R1,Name,3,100.0
+BAD,LINE
+P2,R2,Name,4,not-a-number
+
+P3,R3,Valid,5,200.0

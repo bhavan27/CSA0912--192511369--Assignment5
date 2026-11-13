@@ -1,0 +1,5 @@
+Migration and DatabaseMetaData source is provided.
+Not executed in the build environment because no configured MySQL Server / Connector-J credentials were supplied.
+Run MigrationProgram.java after applying sql/schema.sql and configuring CO5_DB_URL, CO5_DB_USER, CO5_DB_PASSWORD.
+The program writes migration-rejections.txt and reports inserted/rejected records, database product/version, JDBC driver/version and table names.
+No successful migration or metadata output is claimed until it is run locally.

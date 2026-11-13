@@ -1,0 +1,1 @@
+This image illustrates the Part A5 transaction design. It is a design diagram, not actual execution evidence.

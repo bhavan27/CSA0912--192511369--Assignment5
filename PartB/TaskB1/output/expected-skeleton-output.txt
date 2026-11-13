@@ -1,0 +1,3 @@
+Expected output from the supplied Complete-the-Code main method:
+[P1003, 192311003, Divya, 7, 3800.0]
+null

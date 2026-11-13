@@ -1,0 +1,6 @@
+Line 1: ACCEPT [P1001, 192311001, Arun, 12, 4500.0]
+Line 2: REJECT (wrong number of fields)
+Line 3: REJECT (non-numeric route/amount)
+Line 4: ACCEPT [P1004, 192311004, Meena, 12, 4200.0]
+Line 5: REJECT (empty line)
+Accepted=2, rejected=3

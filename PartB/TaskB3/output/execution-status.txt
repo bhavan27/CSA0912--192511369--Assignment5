@@ -1,0 +1,5 @@
+JDBC benchmark source is provided and uses a local MySQL database.
+Not executed in the build environment because no configured MySQL Server / Connector-J credentials were supplied.
+Run PassLoaderBenchmark.java after applying sql/schema.sql and configuring CO5_DB_URL, CO5_DB_USER, CO5_DB_PASSWORD.
+The program prints SELECT/ResultSetMetaData verification, timings for 1,000 / 10,000 / 100,000 rows, auto-commit failure results and transaction rollback results.
+Do not report fabricated timings; capture actual local output after execution.

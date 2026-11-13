@@ -1,0 +1,1 @@
+Task A4 diagram is design evidence for the serialized Hostel → Room → Resident object graph. Part A is submitted as pseudocode and design reasoning, not as Java execution output.

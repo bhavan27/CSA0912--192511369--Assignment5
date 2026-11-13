@@ -1,0 +1,4 @@
+Hostel: Campus Hostel
+Room: A-101
+Resident: Arun | Register: 192311001 | Phone: 9876543210
+Password and live JDBC Connection are runtime/sensitive fields and are transient.

@@ -1,0 +1,7 @@
+Java source compilation check (OpenJDK 21):
+- TaskB1: PASS
+- TaskB2: PASS
+- TaskB3: PASS
+- TaskB4: PASS
+
+This is a compilation check only. It does not claim successful execution against MySQL. B2's login comparison and B3/B4 database experiments must still be run with a configured MySQL Server and Connector/J.

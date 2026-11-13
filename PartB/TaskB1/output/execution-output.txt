@@ -1,0 +1,18 @@
+B1 – PassStore validation
+Find P9001: [P9001, 192319001, Kavya, 12, 4500.0]
+Find P-NOT-FOUND: null
+Route 12 records: 3
+Damaged-file find P3: [P3, R3, Valid, 5, 200.0]
+Damaged-file find P2: null
+
+Line counter measurements (milliseconds; this machine):
+1 MB: unbuffered=447 ms, buffered=11 ms
+10 MB: unbuffered=4223 ms, buffered=21 ms
+50 MB: unbuffered=20574 ms, buffered=41 ms
+
+Lookup growth measurements (milliseconds; target is last ID):
+1000 records: 20 ms; found=true
+10000 records: 67 ms; found=true
+100000 records: 124 ms; found=true
+
+PASS: B1 experiments completed.
